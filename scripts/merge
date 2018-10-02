@@ -1,0 +1,8 @@
+#!/bin/bash
+
+OUT="${@: -1}"
+set -- "${@:1:$(($#-1))}"
+IN=$@
+
+gs -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE=$OUT -dBATCH $IN
+

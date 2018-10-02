@@ -1,0 +1,11 @@
+#!/bin/sh
+
+usage() {
+  echo "pdf tools:"
+  echo ""
+  echo "  man2pdf <manpage>"
+  echo "  watermark \"message\" in.pdf out.pdf"
+  echo "  merge in-1.pdf in-2.pdf ... out.pdf"
+}
+
+usage

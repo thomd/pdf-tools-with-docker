@@ -1,0 +1,10 @@
+#!/bin/sh
+
+convert -background transparent \
+  -fill rgba\(0,0,0,0.12\) -rotate 45 \
+  -pointsize 96 label:"$1" \
+  -trim +repage watermark.pdf
+
+pdftk $2 multistamp watermark.pdf output $3
+
+rm watermark.pdf
